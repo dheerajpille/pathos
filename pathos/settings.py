@@ -14,6 +14,7 @@ import os
 from decouple import config
 
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -46,6 +47,8 @@ INSTALLED_APPS = [
     # Django OAuth toolkit
     'oauth2_provider',
     'corsheaders',
+
+    'pathos_backend'
 ]
 
 OAUTH2_PROVIDER = {
@@ -77,7 +80,6 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 
     # Django OAuth2 middleware
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'oauth2_provider.middleware.OAuth2TokenMiddleware',
 ]
 
@@ -149,6 +151,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)

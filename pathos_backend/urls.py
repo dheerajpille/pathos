@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('pathos/api/', include('pathos_backend.urls'))
+    path('create-parent/', views.CreateParentUserView.as_view(), name="create-parent"), 
+    path('create-child/', views.CreateChildUserView.as_view(), name="create-child"), 
 ]
