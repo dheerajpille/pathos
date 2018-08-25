@@ -3,19 +3,20 @@ from django.contrib.auth.models import User
 from django.contrib.postgres.fields import ArrayField
 # Create your models here.
 
-#Child Model
-class Patient(models.Model):
-    age = models.IntegerField()
-    sex = models.CharField(max_length=8)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-
 #Parent Model 
 class Doctor(models.Model):
     age = models.IntegerField()
     sex = models.CharField(max_length=8)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
 
+
+#Child Model
+class Patient(models.Model):
+    age = models.IntegerField()
+    sex = models.CharField(max_length=8)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    doctor = models.ForeignKey(Doctor, on_delete=models.PROTECT)
 
 #Additional information
 
@@ -61,4 +62,3 @@ class Message(models.Model):
     message = models.CharField(max_length=300)
     daily_report = models.ForeignKey(DailyReport, on_delete=models.CASCADE)
 
-    

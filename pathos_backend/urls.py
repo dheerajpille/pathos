@@ -20,4 +20,13 @@ from . import views
 urlpatterns = [
     path('create-parent/', views.CreateParentUserView.as_view(), name="create-parent"), 
     path('create-child/', views.CreateChildUserView.as_view(), name="create-child"), 
+    path('login/', views.LoginView.as_view(), name='login'),
+
+
+    #Patient specific API calls
+    path('patients/<int:pk>/', views.GetPatientView.as_view(), name='patients'),
+    #Doctor specific API calls
+    path('doctors/list-patients/', views.PatientList.as_view(), name="list-patients"),
+    path('doctors/get-patient/<int:pk>/', views.GetPatientView.as_view(), name='get-patient'),
+
 ]
