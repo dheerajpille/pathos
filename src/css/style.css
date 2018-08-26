@@ -28,9 +28,33 @@ html, body {
     opacity: 0.75;
 }
 
+.addButton {
+    margin: 0.25em 0.25em 0;
+    border: 0.075em solid #223843;
+    color: #223843;
+    border-radius: 50%;
+    height: 1.5em;
+    width: 1.5em;
+    font-size: 2em;
+    display: inline;
+    text-align: center;
+    transition: background 0.125s linear, color 0.125s linear, opacity 0.125s linear;
+}
+
+.addButton:hover {
+    background: #223843;
+    color: #fcfcfc;
+    opacity: 0.75;
+}
+
 .header {
     width: 100%;
     text-align: center;
+}
+
+.dashboardHeader {
+    margin: 1em;
+    text-align: left;
 }
 
 .title {
@@ -54,4 +78,58 @@ input {
     padding: 1em;
     border-radius: 0.5em;
     padding: 1em;
+}
+
+.dashboardTitle {
+    color: #223843;
+    margin-right: 0.25em;
+    display: inline-block;
+    font-size: 2em;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+    width: 25%;
+    border-radius: 0.5em;
+    height: 5em;
+    margin: 0 1em;
+    background: gray;
+}
+
+.profilePicture {
+    border: 0.25em solid #223843;
+    background: #fcfcfc;
+    border-radius: 50%;
+    width: 3.25em;
+    height: 3.25em;
+}
+
+.landingText {
+    margin-left: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h3 {
+    font-weight: 500;
+    margin-bottom: 0;
+    max-width: 45%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+ul li {
+    font-size: 1.125em;
+    max-width: 75%;
+    text-align: left;
 }

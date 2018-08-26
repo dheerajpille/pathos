@@ -85,7 +85,7 @@ class Login extends Component {
                 <div className={"header"}>
                     <h1 className={"title"}>pathos log in</h1>
                 </div>
-                <div className="content">
+                <div className={"menu"}>
                     <form onSubmit={this.handleLogin}>
                         <label>
                             <input type="text" ref="username" name="username" placeholder="username" />
@@ -97,7 +97,7 @@ class Login extends Component {
                         </label>
                         <br/>
                         <br/>
-                        <button type="submit" className={"navLink"}><strong>Log In</strong></button>
+                        <button type="submit" className={"navLink"}><strong>Log in</strong></button>
                     </form>
                 </div>
             </div>

@@ -8,6 +8,7 @@ import registerServiceWorker from './registerServiceWorker';
 import Index from './js/Index';
 import Login from './js/Login';
 import Signup from './js/Signup';
+import Dashboard from './js/Dashboard';
 
 class App extends Component {
     render() {
@@ -17,6 +18,7 @@ class App extends Component {
                     <Route path='/' exact component={Index} />
                     <Route path='/login/' exact component={Login} />
                     <Route path='/signup/' exact component={Signup} />
+                    <Route path='/dashboard/' exact component={Dashboard} />
                     <Route path='/*' exact component={Index} />
                 </Switch>
             </BrowserRouter>

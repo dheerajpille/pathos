@@ -61,7 +61,7 @@ class Signup extends Component {
                 <div className={"header"}>
                     <h1 className={"title"}>pathos sign up</h1>
                 </div>
-                <div className="content">
+                <div className={"menu"}>
                     <form onSubmit={this.handleSignup}>
                         <label>
                             <input type="text" ref="first_name" name="first_name" placeholder="first name" />
@@ -74,7 +74,7 @@ class Signup extends Component {
                         <br/>
                         <br/>
                         <label>
-                            <input type="number" ref="age" name="age" placeholder="age" />
+                            <input type="number" min="0" ref="age" name="age" placeholder="age" />
                         </label>
                         <br/>
                         <br/>

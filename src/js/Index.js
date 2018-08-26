@@ -26,7 +26,28 @@ class Index extends Component {
                 </div>
                 <div className={"header"}>
                     <h1 className={"title"}>pathos</h1>
-                    <p className={"text"}>Your mental health companion</p>
+                    <div className={"landingText"}>
+                        <h1 style={{margin: "0"}}>Streamlining mental health care</h1>
+                        <h3>
+                            1 in 5 adults in North America experience mental health issues.
+                            For many individuals that receive mental health care, wait times are long and visits are sparse.
+                            Our service allows the therapist and the patient to have better analysis and better quality consultations.
+                        </h3>
+                        <h3>
+                            Our service allows a care provider with:
+                        </h3>
+                        <ul>
+                            <li>
+                                Useful health metrics such as heart rate, sleep quality, and sentiment analysis
+                            </li>
+                            <li>
+                                Medication dosage reminders
+                            </li>
+                            <li>
+                                Direct messaging capability
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         );
